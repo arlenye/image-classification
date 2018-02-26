@@ -12484,6 +12484,7 @@ Tests Passed
     <span class="c1"># TODO: Implement Function</span>
     <span class="c1">#return tf.contrib.layers.output(x_tensor, num_outputs)</span>
     <span class="n">image_shape</span> <span class="o">=</span> <span class="n">x_tensor</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span><span class="o">.</span><span class="n">as_list</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># 该处参数有参照地址：http://blog.csdn.net/x32sky/article/details/79366618 调参部分</span>
     <span class="n">weights</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="n">image_shape</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;weights-----&#39;</span><span class="p">,</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">bias</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">num_outputs</span><span class="p">))</span>
@@ -12538,6 +12539,15 @@ Tests Passed
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>下代码参照如下地址完成 <a href="https://classroom.udacity.com/nanodegrees/nd009-cn-advanced/parts/077a76fe-1fff-4a4a-b709-bd0d7ff4661f/modules/a8e95544-c54c-4bc6-88a4-8f76dd7f6664/lessons/df291914-c2fe-43c9-8227-10ec56326732/concepts/afe0660b-a035-499b-9441-737d601e19df">参照地址</a></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
@@ -12556,6 +12566,7 @@ Tests Passed
     <span class="c1">#    conv2d_maxpool(x_tensor, conv_num_outputs, conv_ksize, conv_strides, pool_ksize, pool_strides)</span>
     <span class="c1"># Image - Shape: (32, 32, 3)   conv_num_outputs=6  conv_ksize=4 conv_strides=2 pool_ksize=2 pool_strides=2</span>
     <span class="c1">#x = tf.placeholder(tf.float32, [None, 32, 32, 3])</span>
+    <span class="c1"># 该处参数有参照地址：http://blog.csdn.net/x32sky/article/details/79366618 调参部分</span>
     <span class="n">conv_num_outputs</span> <span class="o">=</span> <span class="mi">18</span>
     <span class="n">conv_ksize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
     <span class="n">conv_strides</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
